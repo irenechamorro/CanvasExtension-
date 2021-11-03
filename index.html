@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts.js"></script>
+<link rel="stylesheet" href="index.css">
+</head>
+<div class="chromeheader">
+    <img src="Untitled_Artwork 76.png" alt="chromeheader" style="width: 100%;height:460px; position:absolute;">
+    <button type="button"style="margin-left:980px; margin-top: 160px; width: 170px ;height:45px; position:relative; background-color:#3B85E8;border-radius: 5px"><a style= color:white;text-decoration:none;font-size:11pt;  href="file:///Users/Irenemarie/Desktop/interaction%202/health%20project/index2.html">Add to Chrome</a></button>
+</div> 
+<body> 
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="Untitled_Artwork 79.png" style="width:100%">
+      <div class="text"> Before </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="Untitled_Artwork 78.png" style="width:100%">
+      <div class="text"> After </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="Untitled_Artwork 80.png" style="width:100%">
+      <div class="text"> Before </div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="Untitled_Artwork 77.png" style="width:100%">
+        <div class="text"> After </div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+
+
+</body>
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div class="chromeheader">
+    <img src="Untitled_Artwork 82.png" alt="overview" style="width: 100%;height:900px; position:relative;">
+    
+</div>
+</html>
